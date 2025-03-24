@@ -1,0 +1,91 @@
+/* Định dạng chung */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 1.5em;               /* Cỡ chữ ban đầu */
+  margin: 0;
+  padding-top: 60px;
+  background-color: #B22222;      /* Nền chính màu đỏ */
+}
+
+/* Thanh công cụ */
+header {
+  background-color: #FFD700;      /* Thanh công cụ màu vàng */
+  color: black;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.hidden-nav {
+  transform: translateY(-100%);
+}
+
+/* Thanh menu */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Phần tiêu đề trang */
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #004b99;
+  color: white;
+}
+
+/* Khung giấy cho nội dung chính */
+.content,
+.anniversary {
+  background: white;              /* Nền phụ trắng, trông như tờ giấy */
+  width: 83.33%;                  /* Chiếm khoảng 5/6 khung hình */
+  max-width: 900px;               /* Giới hạn độ rộng tối đa */
+  margin: 20px auto;              /* Canh giữa theo chiều ngang */
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+/* Hiệu ứng gõ chữ letter-by-letter */
+/* Các phần tử có lớp .typewriter sẽ có kích thước chữ tăng thêm 1,5 lần (tức là khoảng 2.25em) */
+.typewriter {
+  font-size: 2.25em;
+}
+
+/* Định dạng trên điện thoại */
+@media screen and (max-width: 768px) {
+  header {
+    padding: 8px 0;
+  }
+  body {
+    padding-top: 50px;
+  }
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+  }
+  nav ul li {
+    margin: 10px 0;
+  }
+  .content,
+  .anniversary {
+    width: 90%;
+  }
+}
